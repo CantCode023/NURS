@@ -1,2 +1,2 @@
 # NURS
-NILAM Unsupervised Reasoning Summarizer.
+NILAM Unsupervised Reasoning Summarizer, an AINS automation software.
