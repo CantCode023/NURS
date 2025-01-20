@@ -1,2 +1,4 @@
 [API_KEYS]
 GEMINI_API_KEY = "INSERT_API_KEY_HERE"
+
+SUBJECTS = ["INSERT", "SUBJECTS", "HERE", "mathematics", "computer science"]
