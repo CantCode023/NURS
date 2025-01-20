@@ -1,4 +1,6 @@
 [API_KEYS]
 GEMINI_API_KEY = "INSERT_API_KEY_HERE"
+jb_app_token = "TOKEN_HERE"
+jb_app_user = "USER_HERE"
 
-SUBJECTS = ["INSERT", "SUBJECTS", "HERE", "mathematics", "computer science"]
+SUBJECTS = ["INSERT", "SUBJECTS", "HERE", "computer science", "mathematics", "physics", "AI"]
