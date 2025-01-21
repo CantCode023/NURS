@@ -70,7 +70,7 @@ def test_parse_text(mock_get):
 
     # Test request failure
     mock_get.side_effect = requests.exceptions.RequestException
-    with pytest.raises(requests.exceptions.RequestException):
+    with pytest.raises(mock_get.side_effect):
         parse_text("http://invalid-url.com")
 
 if __name__ == '__main__':
