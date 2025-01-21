@@ -39,7 +39,7 @@ class Encryption:
         temp_html_path = self._create_temp_html()
         try:
             driver.get(f'file://{temp_html_path}')
-            encrypted_data = driver.execute_script('return', script)
+            encrypted_data = driver.execute_script(script)
             
             return encrypted_data
 
@@ -54,8 +54,8 @@ class Encryption:
 
     def get_provider(self, nilam_data):
         """Encrypt nilam data"""
-        return self._execute_script(f'encrypt_nilam({nilam_data})')
+        return self._execute_script(f'return encrypt_nilam({nilam_data})')
 
     def get_bearer_authorization(self, data, token):
         """Get bearer authorization token"""
-        return self._execute_script(f'get_bearer({data, token})')
+        return self._execute_script(f'return get_bearer({data, token})')
