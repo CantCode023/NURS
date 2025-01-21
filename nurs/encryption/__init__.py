@@ -1,1 +1,1 @@
-from script_runner import Encryption
+from .script_runner import Encryption
