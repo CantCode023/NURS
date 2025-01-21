@@ -2,10 +2,13 @@
 NILAM Unsupervised Reasoning Summarizer, an AINS automation software.
 
 # TODOLIST
-- [ ] Add function to scrape website text in text_processing.py
-- [ ] Use seleniumbase to open ains.moe.gov.my and import settings
+- [x] Add function to scrape website text in text_processing.py
+- [ ] Use request to upload nilam
   - Make custom stars (int 1-5) and favourite (bool)
+- [ ] Add bad words filter in utils, make a custom exception in exceptions.py
+  - Add other exceptions like bad api key, etc
 - [ ] Make cli
+  - add cooldown between requests
 
 # FUTURE TODOLIST
 - [ ] Add News API support
