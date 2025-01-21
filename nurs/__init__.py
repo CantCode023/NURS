@@ -7,3 +7,5 @@ from .utils import (
 )
 
 from .summarizer import summarize
+
+from .encryption import Encryption
