@@ -1,1 +1,1 @@
-from .main import summarize
+from .main import Summarizer
