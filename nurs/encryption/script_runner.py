@@ -52,10 +52,10 @@ class Encryption:
             if temp_html_path.exists():
                 temp_html_path.unlink()
 
-    def get_provider(self, nilam_data):
+    def get_provider(self, nilam_data) -> str:
         """Encrypt nilam data"""
         return self._execute_script(f'return encrypt_nilam({nilam_data})')
 
-    def get_bearer_authorization(self, data, token):
+    def get_bearer_authorization(self, token) -> str:
         """Get bearer authorization token"""
-        return self._execute_script(f'return get_bearer({data, token})')
+        return self._execute_script(f'return get_bearer({token})')
