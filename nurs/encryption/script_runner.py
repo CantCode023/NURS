@@ -23,7 +23,7 @@ class Encryption:
         <!DOCTYPE html>
         <html>
             <head>
-                <script src="file://{self.encrypt_file}"></script>
+                <script src="https://raw.githubusercontent.com/CantCode023/nurs_patched_aes_implementation/refs/heads/main/encrypt.js"></script>
             </head>
             <body></body>
         </html>
