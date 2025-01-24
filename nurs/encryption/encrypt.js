@@ -36029,26 +36029,6 @@ J4.use(UD, p9);
 J4.use(p9);
 J4.mount("#app");
 
-const get_bearer_data = {
-  "data": {
-    "user": 182409,
-    "author": "Abhay Parashar",
-    "category": "blog",
-    "date": "2025-01-21",
-    "language": "en",
-    "provider": "U2FsdGVkX1/yH4zVu7fgyc7wKEVuDB250B1VAgx7TJ0quz5N0PqOKjuq7Klj8z0AzsJHgwr/Q5L1AZwgbXUTv5pujfcYR7I3IlgKJf805Vk7LlCgZYNzI5bD1R3ii8XPl2XmWbi5clOO926jgpUWZAyLhPsab2xNmsgLANUpie996b0+Tc5Iw1vvaPRkYUkzlfy20L3wXtPmglh7rF/lrv+ZvTAPW18ZtxjmXyVz+HJ66KR96vAlu/aZwf7L231cU1PiZrDZ26ZGVA9VIsGxu6yobrMm8ZovUbSpvfIEv5jDw7jA6e2h6VX+tuyxCrVZsTkIbo+yftNp2iEvnncuTkWljOAva/NO+e2G2htPAnNYyJSYfHM50tpLPxYMjFutjJpCKH0NHHSridvEwJjObFcZEfcVPo6lMCN0o5B3JyJOATt7NgLDrKZyf0x3HuRI8HMkkpNoi+fN4r8NNNh2vDVsXjc6FRENASfi0Gte+vp9VKU8gFHUGNqsMP716RbsJblQs9Hko99oHeR5sVXhjLWhMBxwDL2cGjQ3zZG1fPRJCYCPLKwdl1nEl6Utyxqp/FTV+mHP0C7VoUDFQtSDOv1A+/f6OFiXe1yrIYUr7N2oDb3Syo7+yAWJF4JEkvfMw3UPFnz2adMdz+LLhRoPh3T4n8VZn8Ae6wRRFXiRV1QgZWoQHzsdKK+3BZIy7cJ753lpnyURQ2iKNPKWZ0y5Z9P2fBA54eJMB90tm/cFob7TJcjifi24H7pDKERU5y4pxkNNW/ikrASYVVpg2sLg1ccR+9UTxm9kdNkvElqLf27TEmmetARTfxBJth4y0Q7F2QzK+S3yiU40I/t8Kix2xkjxxw7tjL4UOZLqs+iNmwgGzA1SI928eXczOor6EYOc3ztULPRXeyLuXBRpc1EaSs/LVU5ye4pyEqK0iyqyuMxpIjTEfJ2PhQ15GU8nCopBAOYxyT18+WnehJG+LLnOOVuAXy75rsRwcpqnJXxTfAXJp0ZUZe7+YU2Q/LVIm7pmwRJkFkBXiGeYMH20M9WTc/CNQErJgqv8HNXgMxsGgrTqT0TTNpRmwMtl15nB0Tqw",
-    "publishedYear": "2024",
-    "publisher": "Medium.com",
-    "rating": 5,
-    "review": "What I learned from the article is that Python is great for automating tasks. The author uses it for things like timers, news, stocks, file organization, time tracking, translations, and more. It shows how coding can make daily life easier and more efficient.",
-    "reviewIsVideo": false,
-    "summary": "This article talks about different Python automation scripts the author uses. These scripts help with productivity, like timing work, getting news, tracking stocks, organizing files, and translating text. The author also shares how to use Python to send emails, clean up code, and more.",
-    "title": "18 Insanely Useful Python Automation Scripts I Use Everyday",
-    "type": "digitalSource",
-    "websiteLink": "https://medium.com/pythoneers/18-insanely-useful-python-automation-scripts-i-use-everyday-b3aeb7671ce9"
-  }
-}
-
 const data = {
   "user": 182409,
   "type": "digitalSource",
@@ -36062,10 +36042,10 @@ const data = {
   "review": "What I learned from the article is that Python is great for automating tasks. The author uses it for things like timers, news, stocks, file organization, time tracking, translations, and more. It shows how coding can make daily life easier and more efficient.",
 }
 
-const get_bearer = (data, token) => {
-  return u2._opts("https://ains-api.moe.gov.my/api/nilam-records", "post", data, token)["headers"]["Authorization"]
+const get_bearer = (token) => {
+  
+  return `Bearer ${_9.decrypt(token)}`
 }
 
-// window.get_bearer_data = get_bearer_data
 window.encrypt_nilam = K1.encryptNilam
 window.get_bearer = get_bearer
