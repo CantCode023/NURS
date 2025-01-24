@@ -23,7 +23,7 @@ class Encryption:
         <!DOCTYPE html>
         <html>
             <head>
-                <script src="https://raw.githubusercontent.com/CantCode023/nurs_patched_aes_implementation/refs/heads/main/encrypt.js"></script>
+                <script src="file://{self.encrypt_file}"></script>
             </head>
             <body></body>
         </html>
@@ -54,8 +54,10 @@ class Encryption:
 
     def get_provider(self, nilam_data) -> str:
         """Encrypt nilam data"""
+        print("[!] Encrypting data...")
         return self._execute_script(f'return encrypt_nilam({nilam_data})')
 
     def get_bearer_authorization(self, token) -> str:
         """Get bearer authorization token"""
-        return self._execute_script(f'return get_bearer({token})')
+        print("[!] Getting bearer authorization token...")
+        return self._execute_script(f'return get_bearer("{token}")')
