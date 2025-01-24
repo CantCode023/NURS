@@ -1,6 +1,12 @@
 from pathlib import Path
-import toml
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-def load_config():
-    config_path = Path(__file__).parent.parent.parent / 'config.toml'
-    return toml.load(config_path)
+def load_config() -> dict[str, dict[str, str]]:
+    return {
+        "API_KEYS": {
+            "GEMINI_API_KEY": os.environ["GEMINI_API_KEY"],
+            "jb_app_token": os.environ["jb_app_token"],
+        }
+    }
