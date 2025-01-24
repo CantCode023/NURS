@@ -1,6 +1,12 @@
 # NURS
 NILAM Unsupervised Reasoning Summarizer, an AINS automation software.
 
+# .env format
+```
+GEMINI_API_KEY=your_api_key
+jb_app_token=your_jb_app_token
+```
+
 # TODOLIST
 - [x] Add function to scrape website text in text_processing.py
 - [x] Make summarizer function using Google Gemini
