@@ -70,7 +70,6 @@ class NURS:
                 'sec-ch-ua-mobile': '?0',
                 'sec-ch-ua-platform': '"Windows"',
             }
-            print(data.json())
             json_data = {"data": data.json()}
             response = requests.request(method=method, url=url, headers=post_headers, json=json_data)
             return response.json()
