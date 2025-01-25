@@ -1,12 +1,10 @@
 from dataclasses import dataclass
 from typing import Optional
-from datetime import datetime
 import requests, json
 from bs4 import BeautifulSoup
 
 @dataclass
 class Nilam:
-    user: int
     title: str
     author: str
     publisher: str
@@ -14,17 +12,14 @@ class Nilam:
     review: str
     rating: int
     websiteLink: str
+    date: str
+    publishedYear: str
+    user: Optional[int]=1
     provider: Optional[str]=None
     reviewIsVideo: bool=False
     language: str="en"
     category: str="blog"
-    date: str=datetime.now().strftime("%Y-%m-%d")
     type: str="digitalSource"
-    publishedYear: str=datetime.now().strftime("%Y")
-    
-    def __post_init__(self):
-        self.publisher = "Medium.com" if "medium.com" in self.websiteLink else self.publisher
-        self.websiteLink = self.websiteLink.replace("https://freedium.cfd/", "") if "freedium.cfd" in self.websiteLink else self.websiteLink
 
     def json(self):
         return {
