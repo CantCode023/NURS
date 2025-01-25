@@ -29,7 +29,6 @@ class NURS:
             'Sec-Fetch-Site': 'same-site',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 OPR/115.0.0.0'
         }
-        print(option_headers)
 
         headers = {
             'Accept': 'application/json, text/plain, */*',
@@ -71,7 +70,6 @@ class NURS:
             }
             json_data = {"data": data.json()}
             response = requests.request(method=method, url=url, headers=post_headers, json=json_data)
-            print(response.text)
             return response.json()
         response = requests.request(method=method, url=url, headers=headers)
         return response.json()
@@ -85,7 +83,6 @@ class NURS:
         URL = "/nilam-records"
         nilam.user = self._get_id()
         nilam.provider = self.encryption.get_provider(nilam.get_provider_parameter())
-        print(nilam.provider)
 
         response = self._request_api(URL, method="POST", data=nilam)
         return response
