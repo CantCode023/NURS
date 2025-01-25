@@ -2,6 +2,7 @@ from .utils import (
    load_config,
    tag_visible,
    text_from_html,
+   has_profanity,
    parse_text
 )
 from .utils import exceptions, models, validator
