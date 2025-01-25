@@ -9,20 +9,20 @@ class NURS:
         self.bearer = bearer
         self.API_ENDPOINT = "https://ains-api.moe.gov.my/api"
         self.encryption = Encryption()
-        
+
     def _request_api(self, url:str, method:str="GET", data:Optional[Nilam]=None):
         parsed_url = url[1:] if url.startswith('/') else url
         url = f"{self.API_ENDPOINT}/{parsed_url}"
-        
+
         option_headers = {
             'Accept': '*/*',
             'Accept-Language': 'en-US,en;q=0.9',
             'Access-Control-Request-Headers': 'authorization' if method == "GET" else 'authorization,content-type',
             'Access-Control-Request-Method': method,
-            'Cache-Control': 'no-cache', 
-            'Connection': 'keep-alive', 
+            'Cache-Control': 'no-cache',
+            'Connection': 'keep-alive',
             'Origin': 'https://ains.moe.gov.my',
-            'Pragma': 'no-cache', 
+            'Pragma': 'no-cache',
             'Referer': 'https://ains.moe.gov.my/',
             'Sec-Fetch-Dest': 'empty',
             'Sec-Fetch-Mode': 'cors',
@@ -30,7 +30,7 @@ class NURS:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 OPR/115.0.0.0'
         }
         print(option_headers)
-        
+
         headers = {
             'Accept': 'application/json, text/plain, */*',
             'Accept-Language': 'en-US,en;q=0.9',
@@ -48,7 +48,7 @@ class NURS:
             'sec-ch-ua': '"Chromium";v="130", "Opera GX";v="115", "Not?A_Brand";v="99"',
             'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Windows"',
         }
-        
+
         requests.options(url, headers=option_headers)
         if data is not None:
             post_headers = {
@@ -81,13 +81,11 @@ class NURS:
         response = self._request_api(URL, "GET")
         return response["id"]
 
-    def upload(self, nilam:Nilam, rating:int=5):
+    def upload(self, nilam:Nilam):
         URL = "/nilam-records"
         nilam.user = self._get_id()
-        nilam.rating = rating
         nilam.provider = self.encryption.get_provider(nilam.get_provider_parameter())
         print(nilam.provider)
-        
+
         response = self._request_api(URL, method="POST", data=nilam)
         return response
-        
