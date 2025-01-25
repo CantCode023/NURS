@@ -5,7 +5,7 @@ from .utils import (
    has_profanity,
    parse_text
 )
-from .utils import exceptions, models, validator
+from .utils import exceptions, models, validator, logger
 
 from .summarizer import Summarizer
 
