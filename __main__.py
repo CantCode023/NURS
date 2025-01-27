@@ -76,7 +76,7 @@ def upload_cli(api:dict[str, str]):
         date_published = json_data['datePublished']
         logger.success(f"Extracted date: {date_published[:4]}")
         
-        logger.warn("Paywal detected, bypassing...")
+        logger.warn("Paywall detected, bypassing...")
         no_paywall_url = "https://freedium.cfd/" + url
         logger.success("Paywall bypassed")
         
