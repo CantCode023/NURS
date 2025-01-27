@@ -4,7 +4,6 @@ from ..utils.validator import validate_text
 
 class Summarizer:
     def __init__(self, api_key:str):
-        self.api_key = str
         genai.configure(api_key=api_key)
         
     def summarize(self, text:str):
