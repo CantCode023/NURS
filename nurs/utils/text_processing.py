@@ -26,10 +26,10 @@ def tag_visible(element):
     return True
     
 def has_profanity(text) -> bool:
-    if "Javascript" in text and "cookie" in text:
+    if any(word in text.lower() for word in ["javascript", "cookie"]):
         return True
     return profanity.contains_profanity(text)
-
+    
 def text_from_html(body):
     soup = BeautifulSoup(body, 'html.parser')
     
