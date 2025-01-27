@@ -53,6 +53,18 @@ jb_app_token=your_jb_app_token
 
 ## Usage
 
+1. Go into NURS directory
+```bash
+cd NURS
+```
+
+2. Run the CLI
+```python
+python __main__.py
+```
+
+---
+
 ### Main Menu Options
 1. Upload NILAM
 2. Update API Keys
