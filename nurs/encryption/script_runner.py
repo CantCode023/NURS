@@ -19,11 +19,11 @@ class Encryption:
 
     def _create_temp_html(self):
         """Create temporary HTML file with encryption script"""
-        html_content = f"""
+        html_content = """
         <!DOCTYPE html>
         <html>
             <head>
-                <script src="file://{self.encrypt_file}"></script>
+                <script src="https://cdn.jsdelivr.net/gh/CantCode023/nurs_patched_aes_implementation@main/encrypt.js"></script>
             </head>
             <body></body>
         </html>
