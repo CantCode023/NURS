@@ -22,7 +22,7 @@ git clone https://github.com/CantCode023/NURS.git
 
 2. Install required dependencies:
 ```bash
-pip install -r requirements.txt
+pip install -r NURS/requirements.txt
 ```
 
 ---
