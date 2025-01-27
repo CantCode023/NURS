@@ -139,7 +139,7 @@ This documentation will be updated as new features are added and existing ones a
   - Make custom stars (int 1-5) and favourite (bool)
 - [x] Add bad words filter in utils, make a custom exception in exceptions.py
   - Add other exceptions like bad api key, etc
-- [ ] Make cli
+- [x] Make cli
   - add cooldown between requests
 
 # FUTURE TODOLIST
