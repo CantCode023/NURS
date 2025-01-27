@@ -63,7 +63,7 @@ def test_get_provider(mock_execute_script, encryption):
 def test_get_bearer_authorization(mock_execute_script, encryption):
     # Patching return value of execute script
     mock_execute_script.return_value = "bearer_token"
-    result = encryption.get_bearer_authorization("data", "token")
+    result = encryption.get_bearer_authorization("token")
     
     # Checking if result is correct
     assert result == "bearer_token"

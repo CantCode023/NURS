@@ -1,19 +1,22 @@
 import pytest
-from pathlib import Path
-import toml
+import os
 from nurs import load_config
 from unittest.mock import patch
 
-@patch("toml.load")
-def test_load_config(mock_toml):
-    # Mock data
-    mock_toml.return_value = {"a": "b"}
-    
-    # Test with function
-    config = load_config()
-    assert config == {"a": "b"}
-    
-    # Verify path
-    mock_toml.asset_called_once()
-    called_path = mock_toml.call_args[0][0]
-    assert called_path.name == "config.toml"
+def test_load_config_with_env_vars():
+    with patch.dict(os.environ, {
+        'GEMINI_API_KEY': 'test_key',
+        'jb_app_token': 'test_token'
+    }):
+        config = load_config()
+        assert config == {
+            "API_KEYS": {
+                "GEMINI_API_KEY": "test_key",
+                "jb_app_token": "test_token"  
+            }
+        }
+
+def test_load_config_without_env_vars():
+    with patch.dict(os.environ, clear=True):
+        config = load_config()
+        assert config is None
