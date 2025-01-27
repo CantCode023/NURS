@@ -1,17 +1,17 @@
 ![main menu](assets/menu.png)
 # NURS
 
-
-NURS (NILAM Unsupervised Reasoning Summarizer) is an automated software tool designed to scrape, summarize, and process articles from Medium.com and uploads them to your AINS (Advanced Integration NILAM System) account. It utilizes Google's Gemini API for content summarization and provides a command-line interface for easy interaction.
+NURS (NILAM Unsupervised Reasoning Summarizer) is an automated software tool designed to scrape, summarize, and process articles from Medium.com and uploads them to your AINS (Advanced Integration NILAM System) account (NURS AINS lol).
 
 ## Table of Contents
 1. [Installation](#installation)
 2. [Configuration](#configuration)
-3. [Features](#features)
-4. [Usage](#usage)
-5. [API Reference](#api-reference)
-6. [Technical Details](#technical-details)
-7. [Limitations](#limitations)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [License](#license)
+6. [Support](#support)
+
+---
 
 ## Installation
 
@@ -25,6 +25,8 @@ git clone https://github.com/CantCode023/NURS.git
 pip install -r requirements.txt
 ```
 
+---
+
 ## Configuration
 
 NURS requires two API keys to function:
@@ -33,7 +35,7 @@ NURS requires two API keys to function:
 
 These can be configured in two ways:
 
-1. Create a `.env` file in the root directory:
+1. Create a `.env` file in the project directory:
 ```
 GEMINI_API_KEY=your_gemini_api_key
 jb_app_token=your_jb_app_token
@@ -41,15 +43,7 @@ jb_app_token=your_jb_app_token
 
 2. Input through CLI when prompted (if .env file is not found)
 
-## Features
-
-- **Web Scraping**: Extracts article content from Medium.com
-- **Paywall Bypass**: Automatically bypasses Medium's paywall using freedium.cfd
-- **Content Summarization**: Uses Google's Gemini AI to generate summaries
-- **Automated Upload**: Directly uploads processed content to AINS
-- **Rate Limiting**: Implements a 30-second cooldown between uploads
-- **Secure Key Management**: Encrypted storage of API keys
-- **User-friendly CLI**: Interactive command-line interface
+---
 
 ## Usage
 
@@ -70,12 +64,16 @@ python __main__.py
 2. Update API Keys
 3. Exit
 
+---
+
 ### Uploading an Article
 1. Select option 1 from the main menu
 2. Enter the Medium article URL
 3. Wait for the processing and summarization
 4. Review the generated summary
 5. Automatic upload to AINS
+
+---
 
 ### Updating API Keys
 1. Select option 2 from the main menu
@@ -84,54 +82,25 @@ python __main__.py
    - JB App Token
 3. Enter the new key value
 
-## Technical Details
+Here's a video demonstrating the process:
 
-### Components
-- **Summarizer**: Implements Google Gemini API for content summarization
-- **Encryption**: Handles secure token management
-- **NURS Core**: Main processing and integration logic
-- **Models**: Data structures for NILAM entries
-- **Logger**: Custom logging functionality
+[![Watch the video](https://img.youtube.com/vi/3uQ3ZmgXQmE/0.jpg)](https://www.youtube.com/watch?v=3uQ3ZmgXQmE)
 
-### Data Flow
-1. URL Input → Web Scraping
-2. Content Extraction → Text Processing
-3. Gemini API → Summarization
-4. Data Formatting → NILAM Model
-5. Authentication → AINS Upload
+---
 
-## Limitations
-
-- Currently only supports Medium.com articles
-- Requires active internet connection
-- Rate limited to one upload every 30 seconds
-- Dependent on third-party services (Freedium, Gemini API)
-
-## Error Handling
-
-The system includes comprehensive error handling for:
-- Invalid URLs
-- API authentication failures
-- Rate limiting violations
-- Network connectivity issues
-- Invalid input validation
-
-## Best Practices
-
-1. Respect rate limiting guidelines
-2. Keep API keys secure and updated
-3. Verify article URLs before processing
-4. Review generated summaries before upload
-
-## Contributing
+# Contributing
 
 Please read the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on the code of conduct and the process for submitting pull requests.
 
-## License
+---
+
+# License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
+---
+
+# Support
 
 For support or questions, contact:
 - Email: cantcode023@gmail.com
