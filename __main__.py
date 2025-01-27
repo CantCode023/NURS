@@ -1,4 +1,4 @@
-import os, sys, requests, json, random
+import os, sys, requests, json, random, time
 from rich import print as rprint
 from rich.pretty import pprint
 from bs4 import BeautifulSoup
@@ -120,6 +120,7 @@ def upload_cli(api:dict[str, str]):
         logger.log("All tasks complete.")
         logger.info("Press enter to continue...")
         input()
+        return True
     else:
         logger.error("NURS currently does not support URLs from other sources!")
         logger.info("Press enter to continue...")
@@ -150,12 +151,32 @@ if __name__ == "__main__":
         config = api_key_not_found()
     api = config["API_KEYS"]
     
+    last_upload_time = 0
     while True:
         show_menu()
-        option = int(input("[:] "))
-        if option == 1:
-            upload_cli(api)
-        elif option == 2:
-            update_api(api)
-        elif option == 3:
-            break
+        try:
+            option = int(input("[:] "))
+            
+            if option == 1:
+                cooldown_finished = time.time() - last_upload_time > 30
+                if not cooldown_finished:
+                    remaining_time = int(30 - (time.time() - last_upload_time))
+                    logger.warn(f"Please wait {remaining_time} seconds before uploading again!")
+                    logger.info("Press enter to continue...")
+                    input()
+                    continue
+                response = upload_cli(api)
+                if response:
+                    last_upload_time = time.time()
+            elif option == 2:
+                update_api(api)
+            elif option == 3:
+                break
+            else:
+                logger.error("Invalid option!")
+                logger.info("Press enter to continue...")
+                input()
+        except ValueError:
+            logger.error("Invalid option!")
+            logger.info("Press enter to continue...")
+            input()
