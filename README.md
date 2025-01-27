@@ -2,7 +2,7 @@
 # NURS
 
 
-NURS (NILAM Unsupervised Reasoning Summarizer) is an automated software tool designed to scrape, summarize, and process articles from Medium.com for AINS integration. It utilizes Google's Gemini API for content summarization and provides a command-line interface for easy interaction.
+NURS (NILAM Unsupervised Reasoning Summarizer) is an automated software tool designed to scrape, summarize, and process articles from Medium.com and uploads them to your AINS (Advanced Integration NILAM System) account. It utilizes Google's Gemini API for content summarization and provides a command-line interface for easy interaction.
 
 ## Table of Contents
 1. [Installation](#installation)
