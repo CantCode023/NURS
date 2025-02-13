@@ -11,6 +11,7 @@ def get_page_source(url):
     with SB(uc=True, headless=True) as sb:
         logger.warn("Captcha detected, bypassing...")
         sb.activate_cdp_mode(url)
+        sb.uc_gui_click_captcha()
         logger.success("Bypassed captcha")
         while not sb.is_element_visible("body > div.fixed.bottom-4.left-4"):
             sb.sleep(1)
