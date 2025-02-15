@@ -13,7 +13,7 @@ NURS (NILAM Unsupervised Reasoning Summarizer) is an automated software tool des
 
 ---
 
-## Installation
+## 📦 Installation
 
 1. Clone the repository:
 ```bash
@@ -27,7 +27,7 @@ pip install -r NURS/requirements.txt
 
 ---
 
-## Configuration
+## 🔧 Configuration
 
 NURS requires two API keys to function:
 - Gemini API Key (for content summarization)
@@ -45,7 +45,7 @@ jb_app_token=your_jb_app_token
 
 ---
 
-## Usage
+## 🚀 Usage
 
 1. Go into NURS directory
 ```bash
@@ -88,31 +88,25 @@ Here's a video demonstrating the process:
 
 ---
 
-# Contributing
+# 🙍‍♂️ Contributing
 
 Please read the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on the code of conduct and the process for submitting pull requests.
 
 ---
 
-# License
+# 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-# Support
+# 📞 Support
 
 For support or questions, contact:
 - Email: cantcode023@gmail.com
 - Discord: bd8344
 
----
-
-This documentation will be updated as new features are added and existing ones are modified. For the latest updates, please refer to the project's GitHub repository.
-
----
-
-# TODOLIST
+# 🖊️ TODO-List
 - [x] Add function to scrape website text in text_processing.py
 - [x] Make summarizer function using Google Gemini
 - [x] Add functions to get provider key and bearer authorization
@@ -122,6 +116,9 @@ This documentation will be updated as new features are added and existing ones a
   - Add other exceptions like bad api key, etc
 - [x] Make cli
   - add cooldown between requests
-
-# FUTURE TODOLIST
+- [ ] ⚡ Optimize get_provider and get_bearer_authorization
 - [ ] Add News API support
+
+---
+
+Made with ❤️ by [@CantCode023](https://github.com/CantCode023)
