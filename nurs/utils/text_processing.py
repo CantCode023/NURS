@@ -8,7 +8,7 @@ logger = Logger()
 
 def get_page_source(url):
     logger.log("Getting page content...")
-    with SB(uc=True, headless=True) as sb:
+    with SB(uc=True, headless=False) as sb:
         logger.warn("Captcha detected, bypassing...")
         sb.activate_cdp_mode(url)
         sb.uc_gui_click_captcha()
