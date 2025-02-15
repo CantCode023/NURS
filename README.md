@@ -25,8 +25,6 @@ git clone https://github.com/CantCode023/NURS.git
 pip install -r NURS/requirements.txt
 ```
 
----
-
 ## 🔧 Configuration
 
 NURS requires two API keys to function:
@@ -43,8 +41,6 @@ jb_app_token=your_jb_app_token
 
 2. Input through CLI when prompted (if .env file is not found)
 
----
-
 ## 🚀 Usage
 
 1. Go into NURS directory
@@ -57,14 +53,10 @@ cd NURS
 python __main__.py
 ```
 
----
-
 ### Main Menu Options
 1. Upload NILAM
 2. Update API Keys
 3. Exit
-
----
 
 ### Uploading an Article
 1. Select option 1 from the main menu
@@ -72,8 +64,6 @@ python __main__.py
 3. Wait for the processing and summarization
 4. Review the generated summary
 5. Automatic upload to AINS
-
----
 
 ### Updating API Keys
 1. Select option 2 from the main menu
@@ -86,19 +76,13 @@ Here's a video demonstrating the process:
 
 [![Watch the video](https://img.youtube.com/vi/3uQ3ZmgXQmE/0.jpg)](https://www.youtube.com/watch?v=3uQ3ZmgXQmE)
 
----
-
 # 🙍‍♂️ Contributing
 
 Please read the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on the code of conduct and the process for submitting pull requests.
 
----
-
 # 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 # 📞 Support
 
